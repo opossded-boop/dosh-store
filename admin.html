@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DOSH — لوحة التحكم</title><link rel="stylesheet" href="styles.css"></head>
+<body class="admin">
+<header class="site-header"><a class="brand" href="index.html"><b>دوش</b><small>DOSH</small></a><a href="index.html">عرض المتجر</a></header>
+<main class="admin-wrap">
+  <div class="admin-top"><div><span>لوحة الإدارة</span><h1>إدارة متجر DOSH</h1></div><button class="btn dark-btn" onclick="logout()">خروج</button></div>
+  <section id="loginBox" class="panel">
+    <h2>دخول المدير</h2><input id="adminPin" type="password" placeholder="الرمز"><button class="btn dark-btn" onclick="login()">دخول</button>
+    <small>الرمز التجريبي: 1234 — غيّره قبل الاستخدام الفعلي.</small>
+  </section>
+  <section id="dashboard" hidden>
+    <div class="stats"><div><b id="statProducts">0</b><span>منتجات</span></div><div><b id="statStock">0</b><span>وحدات بالمخزون</span></div><div><b id="statOrders">0</b><span>طلبات</span></div></div>
+    <div class="panel"><div class="panel-title"><h2>إضافة / تعديل منتج</h2><button class="btn" onclick="resetForm()">جديد</button></div>
+      <input type="hidden" id="pid"><div class="form-grid">
+      <input id="pname" placeholder="اسم المنتج"><input id="pprice" type="number" placeholder="السعر بالدينار">
+      <input id="pstock" type="number" placeholder="المخزون"><input id="pcat" placeholder="التصنيف">
+      <input id="psizes" placeholder="المقاسات: S,M,L,XL"><input id="pcolors" placeholder="الألوان: أسود,أبيض">
+      <input id="pimage" placeholder="رابط صورة المنتج"><textarea id="pdesc" placeholder="الوصف"></textarea></div>
+      <button class="btn dark-btn" onclick="saveProduct()">حفظ المنتج</button>
+    </div>
+    <div class="panel"><div class="panel-title"><h2>المنتجات</h2><button class="btn" onclick="exportData()">نسخ بيانات المتجر</button></div><div id="adminProducts"></div></div>
+    <div class="panel"><h2>الطلبات</h2><div id="orders"></div></div>
+  </section>
+</main><script src="admin.js"></script></body></html>

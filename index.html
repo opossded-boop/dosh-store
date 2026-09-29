@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DOSH — المتجر</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html"><b>دوش</b><small>DOSH</small></a>
+  <nav>
+    <a href="#about">نظرة عامة</a><a href="#values">قيمنا</a><a href="#products">تسوق المنتجات</a>
+    <a href="#basics">الأساسيات</a><a href="#craft">الحرفية</a><a href="#contact">موقع المتجر والتواصل</a>
+  </nav>
+  <a class="admin-link" href="admin.html">إدارة المتجر</a>
+</header>
+
+<main>
+<section class="hero dark">
+  <div class="hero-copy">
+    <span>تشكيلة مختارة</span><h1>الأساسيات اليومية</h1>
+    <h2>قطع أساسية متطورة</h2>
+    <p>صُممت باهتمام بالتفاصيل والراحة والجودة الملموسة. لتكون كل قطعة ركيزة موثوقة في خزانة ملابسك.</p>
+    <a class="btn light" href="#products">تسوق الآن</a>
+  </div>
+  <div class="hero-images"><div class="photo p1"></div><div class="photo p2"></div></div>
+</section>
+
+<section id="about" class="intro">
+  <span>جوهر العلامة التجارية</span>
+  <h1>أسلوب سلس وجودة لا تهاون فيها</h1>
+  <p>في دوش، نعيد صياغة الملابس اليومية من خلال تصميم متطور تقنياً، وقصات شاملة، وحرفية مدروسة. صُممت لتمتزج بسلاسة مع حياتك وترتقي بمستوى طقوسك اليومية.</p>
+</section>
+
+<section id="values" class="values">
+  <article><em>٠١</em><h2>الأصالة</h2><p>هندسة صادقة، ومعايير جمالية واضحة، وحرفية شفافة مصممة لاحترام أسلوب حياتك اليومي.</p></article>
+  <article><em>٠٢</em><h2>الابتكار</h2><p>اختيار أقمشة مبتكرة وحياكة عصرية صُممت لتوفر الراحة الكاملة والعملية السهلة كل يوم.</p></article>
+  <article><em>٠٣</em><h2>الشمولية</h2><p>قصات ومقاسات صُممت بعناية لتناسب الجميع، مما يجعل الأسلوب الرفيع شاملاً ومتاحاً للجميع.</p></article>
+</section>
+
+<section id="products" class="products-section">
+  <span>تسوق الآن</span><h1>منتجات دوش الأساسية</h1>
+  <p>اكتشف تشكيلتنا المختارة من الملابس والأساسيات اليومية بأسعار مناسبة وجودة استثنائية.</p>
+  <div id="categories" class="filters"></div>
+  <div id="productsGrid" class="product-grid"></div>
+</section>
+
+<section id="craft" class="split">
+  <div class="fabric"></div>
+  <div><span>الحرفية</span><h1>تفاصيل تُرى وتُلمس</h1><p>نختار الخامات بعناية ونركز على جودة الخياطة والتشطيب حتى تحصل على قطعة تبدو ممتازة وتبقى كذلك.</p></div>
+</section>
+
+<section id="contact" class="contact dark">
+  <div><span>موقع المتجر والتواصل</span><h1>النجف الاشرف | خان المخضر</h1><p>للاستفسار والطلبات تواصل معنا مباشرة.</p></div>
+  <div class="contact-actions"><a class="btn light" href="tel:+9647827220580">+964 782 722 0580</a><a class="btn light" href="https://www.tiktok.com/@dosh__stor" target="_blank">TikTok: dosh__stor</a></div>
+</section>
+</main>
+
+<div id="cartDrawer" class="drawer">
+  <div class="drawer-head"><h2>سلة المشتريات</h2><button onclick="closeCart()">×</button></div>
+  <div id="cartItems"></div><div class="cart-total">المجموع: <b id="cartTotal">0</b> د.ع</div>
+  <button class="btn dark-btn" onclick="checkout()">إتمام الطلب عبر واتساب</button>
+</div>
+<button class="cart-fab" onclick="openCart()">🛒 <span id="cartCount">0</span></button>
+<footer>© DOSH — جميع الحقوق محفوظة.</footer>
+<script src="app.js"></script>
+</body></html>
